@@ -69,6 +69,8 @@ body {
 
     @include responsive($res-xl) {
       width: 80%;
+      margin: 40px auto;
+
     }
 
     @include responsive($res-m) {
@@ -152,9 +154,9 @@ body {
 
           .btn {
             padding-top: 15px;
-            font-size: 0.86em;
+            font-size: 0.75em;
             position: relative;
-            line-height: .75em;
+            //line-height: .75em;
             font-weight: 500;
             @include responsive($res-s) {
               margin-bottom: 20px;
