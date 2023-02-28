@@ -15,13 +15,26 @@ body, html {
 
 
 .btn {
-  padding: 15px 50px;
+  padding: 13px 50px;
   color: $white;
   width: 245px;
   outline: none;
   border: none;
+  border-radius: 3px;
   background-color: $blue;
   font-weight: 700;
+  &:hover{
+    background-color: darken($blue, 15%);
+    cursor: pointer;
+  }
+}
+
+a{
+  color: $blue;
+  &:hover{
+    color: darken($blue, 15%);
+
+  }
 }
 
 body {
@@ -39,7 +52,10 @@ body {
     margin: 100px auto;
     width: 1440px;
     height: fit-content;
+    max-height: 1000px;
     display: flex;
+    overflow: hidden;
+    @include shadow;
 
     .side {
 
@@ -66,7 +82,7 @@ body {
       }
 
       &.left {
-        padding: 117px 78px 106px 73px;
+        padding: 119px 78px 106px 73px;
         display: flex;
         flex-direction: column;
         width: 679px;
@@ -90,6 +106,7 @@ body {
           justify-content: space-between;
 
           .btn {
+            padding-top: 15px;
             font-size: 0.86rem;
             position: relative;
             line-height: .75rem;
@@ -113,7 +130,7 @@ body {
             background-color: $fb-btn;
 
             &:before {
-              background-image: url("./img/facebook.svg");
+              background-image: url("/img/facebook.svg");
             }
           }
 
@@ -121,7 +138,7 @@ body {
             background-color: $in-btn;
 
             &:before {
-              background-image: url("./img/linkedin.svg");
+              background-image: url("/img/linkedin.svg");
             }
           }
 
@@ -145,7 +162,8 @@ body {
             width: 110px;
             top: 50%;
           }
-          &:before{
+
+          &:before {
             left: 26%;
           }
 
@@ -155,46 +173,185 @@ body {
 
         }
 
-        .form{
+        .form {
           display: flex;
           flex-direction: column;
           width: 100%;
 
-          .form__group{
+          .form__group {
             width: 100%;
             display: flex;
             flex-direction: column;
-            &-line{
+
+            &-line {
               flex-direction: row;
             }
-            &-inputs{
+
+            &-inputs {
               justify-content: space-between;
             }
-            .group-field{
+
+            .group-field {
               width: 245px;
-              border: 1px solid gray;
+              border: 1px solid $very-light-grey;
               flex-direction: column;
               display: flex;
               padding: 8px 10px 10px;
               border-radius: 3px;
-              label{
+
+              label {
                 font-weight: 500;
-                font-size: .8rem ;
+                font-size: .8rem;
+                color: $light-grey;
               }
-              &__input{
+
+              &__input {
                 border: none;
                 outline: none;
                 padding-top: 8px;
-                font-weight: 700;
+                font-weight: 500;
                 font-size: 0.93rem;
               }
-              &:has(input:focus){
+
+              &:has(input:focus) {
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
                 border-left: 1px solid $blue;
               }
             }
 
+            &.investor-type {
+              display: flex;
+              flex-direction: column;
+              margin-top: 62px;
+
+              .investor-type__header {
+                font-weight: 500;
+                font-size: 1.32rem;
+              }
+
+              .investor-type__sub-header {
+                font-weight: 500;
+                font-size: .885rem;
+                margin-top: 15px;
+                color: $grey;
+              }
+
+              .switchers {
+                margin-top: 50px;
+                display: flex;
+
+                &__group {
+                  padding-left: 30px;
+                  margin-right: 50px;
+                  position: relative;
+
+                  label {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:before {
+                      content: '';
+                      position: absolute;
+                      display: block;
+                      width: 12px;
+                      height: 12px;
+                      border: 3px solid $very-light-grey;
+                      border-radius: 50%;
+                      top: 50%;
+                      left: -30px;
+                      transform: translateY(-50%);
+                    }
+
+
+                  }
+
+                  .tip {
+                    //content: 'i';
+                    width: 10px;
+                    height: 10px;
+                    text-align: center;
+                    font-size: .7rem;
+                    display: block;
+                    position: absolute;
+                    //border-radius: 50%;
+                    //border: 1px solid $grey;
+                    color: $grey;
+                    right: -15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    &:hover {
+                      cursor: pointer;
+                      //border: 1px solid $blue;
+                      color: $blue;
+
+                    }
+                  }
+
+                  input {
+                    display: none;
+
+                    &:checked + label:before {
+                      border: 3px solid $blue;
+                      width: 10px;
+                      height: 10px;
+                    }
+
+                  }
+
+                }
+
+              }
+
+              .investor-type__help {
+                margin-top: 30px;
+                border-radius: 3px;
+                max-width: 50%;
+                padding: 7px 15px;
+                font-size: .85rem;
+                line-height: 1.02rem;
+                @include shadow;
+              }
+
+            }
+
+            &.privacy {
+              margin-top: 54px;
+              margin-bottom: 62px;
+              padding-left: 23px;
+
+              label {
+                color: $grey;
+                font-size: .835rem;
+                position: relative;
+
+                &:before {
+                  position: absolute;
+                  content: '';
+                  display: block;
+                  width: 10px;
+                  height: 10px;
+                  border: 1px solid $grey;
+                  top: 50%;
+                  left: -23px;
+                  transform: translateY(-50%);
+                }
+              }
+
+              input {
+                display: none;
+
+                &:checked + label {
+                  &:before {
+                    border: 1px solid $blue;
+                    background-color: $blue;
+                  }
+                }
+              }
+            }
           }
 
         }
