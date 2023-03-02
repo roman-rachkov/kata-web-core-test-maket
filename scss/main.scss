@@ -156,7 +156,6 @@ body {
             padding-top: 15px;
             font-size: 0.75em;
             position: relative;
-            //line-height: .75em;
             font-weight: 500;
             @include responsive($res-s) {
               margin-bottom: 20px;
@@ -325,6 +324,13 @@ body {
                   margin: 30px auto;
                 }
 
+                @include responsive($res-xs){
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: start;
+                }
+
                 &__group {
                   padding-left: 30px;
                   margin-right: 50px;
@@ -352,13 +358,9 @@ body {
                       left: -30px;
                       transform: translateY(-50%);
                     }
-
-
                   }
 
                   .tip {
-                    width: 10px;
-                    height: 10px;
                     text-align: center;
                     font-size: .7em;
                     display: block;
@@ -379,6 +381,12 @@ body {
                       position: relative;
                       transform: unset;
                       top: 0;
+                    }
+                    @include responsive($res-xs){
+                      //display: flex;
+                      //flex-direction: column;
+                      right: 0;
+                      text-align: left;
                     }
                   }
 
