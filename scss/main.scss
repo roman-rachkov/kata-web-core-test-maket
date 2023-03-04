@@ -8,11 +8,11 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   width: 100%;
   height: auto;
 }
-
 
 .btn {
   padding: 13px 50px;
@@ -31,7 +31,6 @@ body, html {
   @include responsive($res-s) {
     align-self: center;
   }
-
 }
 
 a {
@@ -39,7 +38,6 @@ a {
 
   &:hover {
     color: darken($blue, 15%);
-
   }
 }
 
@@ -50,7 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-weight: 400;
 
   @include responsive($res-s) {
@@ -70,7 +68,6 @@ body {
     @include responsive($res-xl) {
       width: 80%;
       margin: 40px auto;
-
     }
 
     @include responsive($res-m) {
@@ -83,7 +80,6 @@ body {
     }
 
     .side {
-
       &.right {
         //height: 100%;
         position: relative;
@@ -163,7 +159,7 @@ body {
             }
 
             &:before {
-              content: '';
+              content: "";
               position: absolute;
               display: block;
               width: 18px;
@@ -191,14 +187,13 @@ body {
               background-image: url("/img/linkedin.svg");
             }
           }
-
         }
 
         .delimiter {
           text-transform: uppercase;
           margin: 52px 0 47px;
           text-align: center;
-          font-size: .75em;
+          font-size: 0.75em;
           position: relative;
           font-weight: 500;
 
@@ -208,7 +203,7 @@ body {
 
           &:before,
           &:after {
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             height: 2px;
@@ -224,7 +219,6 @@ body {
           &:after {
             right: 26%;
           }
-
         }
 
         .form {
@@ -264,7 +258,7 @@ body {
 
               label {
                 font-weight: 500;
-                font-size: .8em;
+                font-size: 0.8em;
                 color: $light-grey;
               }
 
@@ -303,7 +297,7 @@ body {
 
               .investor-type__sub-header {
                 font-weight: 500;
-                font-size: .885em;
+                font-size: 0.885em;
                 margin-top: 15px;
                 color: $grey;
                 @include responsive($res-s) {
@@ -330,7 +324,7 @@ body {
                   margin-right: 50px;
                   position: relative;
 
-                  @include responsive($res-s){
+                  @include responsive($res-s) {
                     margin: 0;
                   }
 
@@ -341,7 +335,7 @@ body {
                     cursor: pointer;
 
                     &:before {
-                      content: '';
+                      content: "";
                       position: absolute;
                       display: block;
                       width: 12px;
@@ -352,15 +346,13 @@ body {
                       left: -30px;
                       transform: translateY(-50%);
                     }
-
-
                   }
 
                   .tip {
                     width: 10px;
                     height: 10px;
                     text-align: center;
-                    font-size: .7em;
+                    font-size: 0.7em;
                     display: block;
                     position: absolute;
                     color: $grey;
@@ -371,7 +363,6 @@ body {
                     &:hover {
                       cursor: pointer;
                       color: $blue;
-
                     }
 
                     @include responsive($res-s) {
@@ -399,7 +390,7 @@ body {
                 border-radius: 3px;
                 max-width: 50%;
                 padding: 7px 15px;
-                font-size: .85em;
+                font-size: 0.85em;
                 line-height: 1.02em;
                 @include shadow;
 
@@ -409,7 +400,6 @@ body {
                   margin-top: 0;
                 }
               }
-
             }
 
             &.privacy {
@@ -419,12 +409,12 @@ body {
 
               label {
                 color: $grey;
-                font-size: .835em;
+                font-size: 0.835em;
                 position: relative;
 
                 &:before {
                   position: absolute;
-                  content: '';
+                  content: "";
                   display: block;
                   width: 10px;
                   height: 10px;
