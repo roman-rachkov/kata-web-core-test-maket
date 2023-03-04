@@ -5,6 +5,7 @@
 Если верстку не знаете совсем - можете приступить к изучению с нуля.
 
 ### Рекомендумые редакторы кода
+
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 
@@ -33,6 +34,8 @@
 - ![#FFFFFF](https://placehold.it/15/FFFFFF/000000?text=+) `#FFFFFF`
 
 ### Результат
+
 Предоставить в виде 2 ссылок
-1) Github репозиторий - [Как выложить свой проект на GitHub](https://maxsite.org/page/how-to-put-your-project-on-github-com)
-2) Github Pages - [как настроить](https://developer.mozilla.org/ru/docs/Learn/Common_questions/Using_Github_pages)
+
+1. Github репозиторий - [Как выложить свой проект на GitHub](https://maxsite.org/page/how-to-put-your-project-on-github-com)
+2. Github Pages - [как настроить](https://developer.mozilla.org/ru/docs/Learn/Common_questions/Using_Github_pages)
